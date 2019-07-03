@@ -8,7 +8,7 @@
     
     
 </head>
-<body onload="bodyOnLoad(); clearBox(city)" >
+<body onload="loadValues();">
 <div id="cookie" class="container" style="height:600px;">
 	<div class="jumbotron" style="margin-bottom:0px; background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(9,9,121,0.3981967787114846) 28%, rgba(9,9,121,0.6979166666666667) 100%); color:white;">
     <h2 class="text-center" style="font-size:40px; font-weight:550;">Weather Info</h2>
@@ -25,9 +25,15 @@
             <button id="submitCity" class="btn btn-primary" onclick="saveValues()">Search City</button>
         </div>
         <div id="showWeather"></div>
-        <div id="loading"></div>
+        <div onload="myFunction()" id="loading"></div>
     </div>
-</div>   
+</div>
+<script>
+function myFunction() {
+    document.getElementById("city").value = "";
+}
+
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
 <script src="weather.js"></script>   
 <script src="loader.js"></script>  

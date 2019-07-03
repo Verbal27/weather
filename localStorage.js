@@ -3,12 +3,8 @@ function saveValues() {
         }
 
         function loadValues() {
+        		if (localStorage._city == null)
+        	document.getElementById("city").value = "";
+        	else		
             document.getElementById("city").value = localStorage._city;
         }
-function bodyOnLoad(){  
-    loadValues();
-}
-function clearBox(city)
-{
-    document.getElementById("city").innerHTML = "";
-}

@@ -1,5 +1,9 @@
 $(document).ready(function(){
-    
+    var city = $("#city").val();
+    if(city!= ''){
+        return getWeather();
+    }
+
     $("#submitCity").click(function(){
         return getWeather();
     });
